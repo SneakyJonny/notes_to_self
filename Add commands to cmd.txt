@@ -33,9 +33,9 @@ In the above command, "subl" is the name of the command that you will reference 
   c. Then click save
 
 5. The registry key that is needed is at the following location:
-HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Command Prompt
+HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Command Processor
 
-6. In this folder, check to see if the "AutoRun" key already exists. If it does not, right click on the "Command Prompt" folder and click new > string value
+6. In this folder, check to see if the "AutoRun" key already exists. If it does not, right click on the "Command Processor" folder and click new > string value
 
 7. Change the name of this new string value to "AutoRun"
 
