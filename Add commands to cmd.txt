@@ -1,0 +1,46 @@
+This document describes how to get the "subl" command to work from the command line. The steps should work for other commands as well.
+
+
+References:
+https://technet.microsoft.com/en-us/library/cc779439(WS.10).aspx
+- Location of the AutoRun registry key
+
+http://stackoverflow.com/questions/9440639/sublime-text-from-command-line-win7
+- Setting up a doskey value
+
+https://support.microsoft.com/en-us/kb/310516
+- Editing the registry
+
+https://support.microsoft.com/en-us/kb/322756
+- Backing up the registry
+
+
+1. Create a batch file to be run whenever cmd.exe is executed. For example, I created mine at:
+c:\dev\autorun.bat
+
+2. Add the following entries to the batch file you just created:
+@ECHO OFF
+doskey subl="C:\Program Files (x86)\Sublime Text 2\sublime_text.exe" $*
+@ECHO ON
+
+In the above command, "subl" is the name of the command that you will reference from the command line. The "c:\Prog..." is the path to the executable that you would like to associate with the command.
+
+3. You will need to edit the windows registry to tell it to run your script whenever cmd.exe is opened. Go to the start menu and type "regedit" into the Search box
+
+4. It is recommended that whenever you edit your registry, you back it up first (especially if you aren't sure what you're doing). To do this:
+  a. click "File>Export"
+  b. Navigate to the directory where you like like to save the backup, type the name you would like to give the backup and select "All" under "#xport range"
+  c. Then click save
+
+5. The registry key that is needed is at the following location:
+HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Command Prompt
+
+6. In this folder, check to see if the "AutoRun" key already exists. If it does not, right click on the "Command Prompt" folder and click new > string value
+
+7. Change the name of this new string value to "AutoRun"
+
+8. Then modify its value to the qualified name of your autorun.bat file (in my case: C:\dev\autorun.bat)
+
+9. Start a new command prompt and type subl to verify that it is working
+
+
