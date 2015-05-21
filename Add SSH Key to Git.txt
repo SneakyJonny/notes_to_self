@@ -1,0 +1,8 @@
+1. To set up SSH Key, type the following into your Git Bash shell: ssh-keygen -t rsa -C "your.email@example.com"
+
+2. This will prompt you for a passphrase. Enter the password and make sure you remember it. I don't think you will be able to recover it if you forget it
+
+3. To retrieve your public key, type: clip < ~/.ssh/id_rsa.pub
+This will copy it to your clip board. 
+
+4. From there you can paste it into word, your accounts at bitbucket, github, etc.
