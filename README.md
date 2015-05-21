@@ -2,4 +2,4 @@
 General notes
 
 This repository contains general programming related notes. 
-I created as a central place for me to store random, easily forgettable steps.
+It serves as a single place for storing random, easily forgettable steps.
