@@ -1,0 +1,19 @@
+First navigate to the directory you would like to work with
+
+Create a Git repository:
+  git init
+
+Add all modified files to the staging area:
+  git add .
+
+Commit (i.e. save) changes to the repository:
+  git commit -m "This comment describes the changes"
+
+Save all changes to the remote repository (e.g. bitbucket, github, etc.)
+  git push origin master
+
+** Note in the above command that we are pushing the "master" branch to the remote repository. We haven't looked into branching yet but I believe it can be quite useful
+
+Two things we still need to investigate:
+1. Branching
+2. Merging: If two of us are working on the project at once, whoever pushes first will be fine but the second person will need to merge the changes together before they are allowed to push (I think). I have no idea how to do this at the moment.
